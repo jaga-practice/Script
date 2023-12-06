@@ -6,5 +6,5 @@ Input=$(find /home/centos/logs -name "*.log" -type f -mtime +14)
 while IFS= read -r line
 do 
 echo "Deleting logfile : $line" &>>$Log_file
-#rm -rf $line
+rm -rf $line
 done <<< "$Input"
